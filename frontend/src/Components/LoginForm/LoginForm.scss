@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+.login_form {
+    max-width: 350px;
+    // min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    font-family: "Tektur", sans-serif;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+
+    .logo {
+        width: 80px;
+        margin: auto;
+
+        img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff;
+        }
+    }
+
+    .title {
+        h2 {
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: 1.3px;
+            padding-left: 10px;
+            text-align: center;
+            color: #555;
+            color: #03a9f4;
+            margin-top: 16px;
+        }
+    }
+
+    form {
+        padding: 12px;
+        margin-top: 12px;
+        .form-field {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+
+            input {
+                width: 100%;
+                display: block;
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 1.2rem;
+                color: #666;
+                padding: 10px 15px 10px 10px;
+
+                &::placeholder {
+                    color: #03a9f4;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .btn {
+            box-shadow: none;
+            width: 100%;
+            height: 40px;
+            background-color: #03a9f4;
+            color: #fff;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+            letter-spacing: 1.3px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #039be5;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .forgot {
+        text-align: center;
+        font-size: 16px;
+        a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: #03a9f4;
+
+            &:hover {
+                color: #039be5;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 380px) {
+    .login_form {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
