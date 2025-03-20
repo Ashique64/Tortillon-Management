@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 .login_form {
     max-width: 350px;
-    // min-height: 500px;
+    min-height: 470px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
-    background-color: #ecf0f3;
+    background-color: #0C0C0C;
     border-radius: 15px;
     font-family: "Tektur", sans-serif;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    box-shadow: 13px 13px 20px var(--login-color-1), -13px -13px 20px var(--login-color-1);
 
     .logo {
         width: 80px;
@@ -18,7 +18,7 @@
             height: 80px;
             object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff;
+            box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px var(--login-color-1), -8px -8px 15px var(--login-color-1);
         }
     }
 
@@ -44,7 +44,7 @@
             padding-left: 10px;
             margin-bottom: 20px;
             border-radius: 20px;
-            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+            box-shadow: inset 8px 8px 8px var(--login-color-1), inset -8px -8px 8px #000000;
 
             input {
                 width: 100%;
@@ -71,7 +71,7 @@
             background-color: #03a9f4;
             color: #fff;
             border-radius: 25px;
-            box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+            box-shadow: 3px 3px 3px var(--login-color-1), -3px -3px 3px var(--login-color-1);
             letter-spacing: 1.3px;
             transition: all 0.3s ease-in-out;
 

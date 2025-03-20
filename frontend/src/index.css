@@ -1,4 +1,6 @@
-
+:root {
+    --login-color-1:#1f1e1e;
+}
 
 body {
     margin: 0;
