@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
 .login_form {
     max-width: 350px;
     min-height: 470px;
@@ -23,6 +23,7 @@
     }
 
     .title {
+        overflow: hidden;
         h2 {
             font-weight: 600;
             font-size: 1.4rem;
@@ -32,6 +33,13 @@
             // color: #555;
             color: var(--login-color-2);
             margin-top: 16px;
+        }
+
+        p {
+            text-align: center;
+            color: rgb(206, 29, 29);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
         }
     }
 
@@ -79,6 +87,16 @@
                 // background-color: rgb(0, 0, 0);
                 transform: scale(1.1);
             }
+
+            span {
+                width: 16px;
+                height: 16px;
+                border: 2px solid #fff;
+                border-top: 2px solid transparent;
+                border-radius: 50%;
+                animation: spin 0.6s linear infinite;
+                display: inline-block;
+            }
         }
     }
 
@@ -89,13 +107,20 @@
             text-decoration: none;
             font-size: 0.8rem;
             color: var(--login-color-2);
-
         }
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
-@media(max-width: 380px) {
+@media (max-width: 380px) {
     .login_form {
         margin: 30px 20px;
         padding: 40px 15px 15px 15px;

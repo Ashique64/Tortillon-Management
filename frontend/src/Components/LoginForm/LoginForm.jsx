@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { backendURL } from "../../API";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./LoginForm.scss";
 
 const LoginForm = () => {
@@ -8,7 +9,7 @@ const LoginForm = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-
+    const navigate = useNavigate();
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -24,11 +25,13 @@ const LoginForm = () => {
             localStorage.setItem("refresh_token", response.data.refresh);
             localStorage.setItem("user", JSON.stringify(response.data.user));
 
-            alert("Login Successful!");
+            navigate("/dashboard");
         } catch (error) {
             setError("Invalid credentials");
         } finally {
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 2000);
         }
     };
 
@@ -66,8 +69,8 @@ const LoginForm = () => {
                         required
                     />
                 </div>
-                <button type="submit" disabled={loading} className="btn mt-3">
-                    {loading ? "Logging in..." : "Login"}
+                <button type="submit" className="btn mt-3">
+                    {loading ? <span className="spinner"></span> : "Login"}
                 </button>
             </form>
             <div className="forgot">
