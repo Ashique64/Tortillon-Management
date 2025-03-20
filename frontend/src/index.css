@@ -1,5 +1,6 @@
 :root {
-    --login-color-1:#1f1e1e;
+    --login-color-1:#cbced1;
+    --login-color-2:rgb(27, 26, 26);
 }
 
 body {
