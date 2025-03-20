@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+$primary-color: #4a90e2;
+$bg-color: #f4f6f9;
+$text-color: #333;
+$table-header-bg: #4a90e2;
+$table-header-text: #fff;
+$danger-color: #e74c3c;
+$edit-color: #f1c40f;
+
+.dashboard {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $bg-color;
+    padding: 20px;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: $text-color;
+
+            .icon {
+                font-size: 26px;
+                color: $primary-color;
+            }
+        }
+
+        .item2 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .search-bar {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .search-icon {
+                    font-size: 20px;
+                    color: $primary-color;
+                }
+
+                input {
+                    padding: 8px;
+                    border-radius: 7px;
+                    border: 1px solid #ddd;
+                }
+            }
+            .add-btn {
+                display: flex;
+                align-items: center;
+                border: none;
+                color: white;
+                cursor: pointer;
+                transition: 0.3s;
+
+                i {
+                    font-size: 36px;
+                    color: $primary-color;
+                    transform: 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-container {
+        margin-top: 20px;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+
+        .item-table {
+            width: 100%;
+            border-collapse: collapse;
+
+            thead {
+                background: $table-header-bg;
+                color: $table-header-text;
+                text-align: left;
+                overflow: hidden;
+
+                th {
+                    padding: 14px;
+                    font-weight: 600;
+                    overflow: hidden;
+                }
+            }
+
+            tbody {
+                tr {
+                    border-bottom: 1px solid #ddd;
+                    transition: background 0.3s;
+
+                    &:hover {
+                        background: rgba($primary-color, 0.1);
+                    }
+
+                    td {
+                        padding: 12px;
+                        color: $text-color;
+                    }
+
+                    .action-icons {
+                        display: flex;
+                        gap: 15px;
+
+                        .edit-icon {
+                            color: $edit-color;
+                            cursor: pointer;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: rgb(184, 138, 21);
+                            }
+                        }
+
+                        .delete-icon {
+                            color: $danger-color;
+                            cursor: pointer;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: rgb(200, 18, 18);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .dashboard {
+        .navbar {
+            .item2 {
+                .search-bar {
+                    display: none;
+                }
+            }
+        }
+    }
+}
